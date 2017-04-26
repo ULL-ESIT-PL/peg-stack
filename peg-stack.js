@@ -28,6 +28,9 @@
     this.debug = value;
   };
   
+  /**
+   * @param {String} values ... - log the messages if debug is true
+   */
   PEGStack.prototype.log =function() {
     if (this.debug) console.log([].slice.call(arguments).join(''));
   };
