@@ -12,9 +12,9 @@
     "url": "git@github.com:ULL-ESIT-PL-1617/peg-stack.git"
   },
   "keywords": [
-    "escape",
-    "unescape",
-    "html"
+    "pegjs",
+    "grammars",
+    "parsing"
   ],
   "author": "Casiano Rodriguez <casiano.rodriguez.leon@gmail.com>",
   "licenses": [
