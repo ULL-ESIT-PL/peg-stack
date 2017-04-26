@@ -1,5 +1,20 @@
-/* a local variable per syntactic variable */
+/* a Stack for PEGjs */
 
+  /** 
+   * @constructor 
+   * @example
+   *  { //initializer
+   *    var util = require('util');
+   *    console.log(process.cwd());
+   *    var PEGStack = require('peg-stack.js');
+   *    console.log('PEGStack = '+util.inspect(PEGStack));
+   *    var stack = new PEGStack();
+   *    var action = function() {
+   *      var [val1, op, val2] = stack.pop(3);
+   *      stack.push(eval(val1+op+val2)); 
+   *    }
+   *  }
+  */
   function PEGStack() {
     this.stack = []; 
     this.debug = false;
@@ -14,6 +29,15 @@
     if (this.debug) console.log([].slice.call(arguments).join(''));
   };
 
+  /**
+   * receives an unlimited number of arguments to push
+   * @example
+   * sum     = first:product &{ return stack.push(first); } 
+   *             (op:[+-] product:product 
+   *             &{ stack.push(op, product); return stack.make(action); })* 
+   *             { return stack.pop(); } 
+   * @returns {true}  to keep parsing
+   */
   PEGStack.prototype.push = function() {
     var that = this;
      [].slice.call(arguments).forEach( function(value) {
@@ -23,6 +47,12 @@
     return true;
   }
 
+  /**
+   * @param {function} action - The action parameter
+   * is a function that the stack 
+   * to receive the params
+   * and pushes the result 
+   */
   PEGStack.prototype.make = function(action) {
     try {
       action(); 
@@ -34,6 +64,9 @@
     return true;
   };
 
+  /**
+   * @param {number} count - Number of items to pop
+   */
    PEGStack.prototype.pop = function(count) {
      count = count || 1;
      var result = this.stack.splice(-count, count);

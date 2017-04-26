@@ -5,7 +5,7 @@
   "main": "peg-stack.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha --reporter spec",
-    "doc": "documentation build index.js -f html -o docs"
+    "doc": "documentation build peg-stack.js -f html -o docs"
   },
   "repository": {
     "type": "git",
