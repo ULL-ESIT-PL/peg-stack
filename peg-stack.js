@@ -21,6 +21,9 @@
     return true; 
   }
   
+  /**
+   * @param {boolean} value - Switch the log messages on
+   */
   PEGStack.prototype.setDebug =function(value) {
     this.debug = value;
   };
