@@ -45,7 +45,7 @@ A minimal node module providing utility methods to work with PEG.js semantic pre
 
 ## API Documents
 
-[See Documentation at https://ull-esit-pl.github.io/peg-stack/](https://ull-esit-dsi.github.io/peg-stack/)
+[See Documentation at https://ull-esit-pl.github.io/peg-stack/](https://ull-esit-pl.github.io/peg-stack/)
 
 To generate the docs we use [documentation.js](http://documentation.js.org/):
 
