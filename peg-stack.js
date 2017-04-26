@@ -6,7 +6,7 @@
    *  { //initializer
    *    var util = require('util');
    *    console.log(process.cwd());
-   *    var PEGStack = require('peg-stack.js');
+   *    var PEGStack = require('@ull-esit-pl/peg-stack');
    *    console.log('PEGStack = '+util.inspect(PEGStack));
    *    var stack = new PEGStack();
    *    var action = function() {
