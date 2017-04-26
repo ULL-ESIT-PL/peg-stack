@@ -3,7 +3,6 @@ var should = require('chai').should();
 var grammar = `
   {
     var util = require('util');
-    console.log(process.cwd());
     var PEGStack = require('peg-stack.js');
     console.log('PEGStack = '+util.inspect(PEGStack));
     var stack = new PEGStack();
