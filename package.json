@@ -1,6 +1,6 @@
 {
   "name": "@ull-esit-pl/peg-stack",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "A small library providing stack objects to be used inside PEGjs intermediate predicates",
   "main": "peg-stack.js",
   "scripts": {
